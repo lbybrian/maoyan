@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+}
+.aaa{
+    width:100%;
+    height:58px;
+    background:#e54847;
+    display:flex;
+}
+.aaa p{
+    text-align:center;
+    margin:0px auto;
+    line-height:58px;
+    font-size:20px;
+}
+.bbb{
+    width:100%;
+    height:58px;
+    display:flex;
+    flex-wrap:wrap-reverse;
+    background:blue;
+    position:fixed;
+    top:0px;
+}
+.gong{
+   width:100%;
+    height:53px;
+    display:flex;
+    font-size:16px;
+    border-top:1px solid black;
+    position:fixed;
+    bottom:0px;
+    justify-content: space-around;
+}
+.ddd{
+    margin-right:50px;
+    margin-top:5px;
+    color:black;
+    margin-left:20px;
+}
+.qqq{
+    margin-right:50px;
+    margin-top:5px;
+    color:black;
+    margin-left:50px;
+}
+.iconfont{
+    width:2px;
+    height:10px;
+    vertical-align: -1px;
+    fill: currentColor;
+    overflow: hidden;
+    margin-left:4px;
+}
+a{text-decoration:none;}
+.box{
+    display:flex;
+}
