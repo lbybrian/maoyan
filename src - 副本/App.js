@@ -22,11 +22,11 @@ class Nac extends React.Component {
         return(
                 <Router>
                     <Switch>
+                    <Route path={"/"} exact component = {Movie}></Route>
+                    <Route path={"/Home"} exact component = {Home}></Route>
+                    <Route path={"/my"} exact component = {My}></Route>
                         <Route path={"/Login"} component = {Login}></Route>
                         <Route path={"/LoginPhone"} component = {LoginPhone}></Route>
-                        <Route path={"/"} exact component = {Movie}></Route>
-                        <Route path={"/Home"} exact component = {Home}></Route>
-                        <Route path={"/my"} exact component = {My}></Route>
 //                      <Route path={"/Sign"} component = {Sign}></Route>
                     </Switch>
 
@@ -36,13 +36,14 @@ class Nac extends React.Component {
                         <NavLink  activeStyle = {{color:"red"}} to={"/Home"}><span className="iconfont">&#xe65a;</span><p>影院</p></NavLink>
                         <NavLink  activeStyle = {{color:"red"}} to={"/My"}><span className="iconfont">&#xe60e;</span><p>我的</p></NavLink>
                     </nav>
-			  		<Route  path={"/My"} component={My}></Route>
+			  		<Route path={"/My"} component={My}></Route>
+			  		<Route  path={"/Sign"} component={Sign}></Route>
 			  		<Route path={"/FindPass"} component={FindPass}></Route>
 			  	</div>
 			  		
                     {/*<div className={"box"}>*/}
                     {/*    <div className={"aaa"}>*/}
-                    {/*    <p style={{color:"white"}}>猫眼电影</p>*/}
+                    {/*        <p style={{color:"white"}}>猫眼电影</p>*/}
                     {/*    </div>*/}
                     {/*    <Kome></Kome>*/}
                     {/*</div>*/}
