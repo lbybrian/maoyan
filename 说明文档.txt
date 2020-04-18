@@ -1,0 +1,74 @@
+
+该项目已实现猫眼页面的静态布局2020/3/3
+
+2020/03/14解决bug:页面刷新样式改变：
+1.main.js中import引入iconfont.css
+2.引入后还有问题发现是public中index外部引入css的路径非绝对路径（将./css文件改为/css解决）
+
+
+2020/03/23解决bug:header和二级路由滚动问题：Position：fixed；
+新bug：二级路由内容头部被header和二级路由覆盖
+
+2020/03/24解决新bug二级路由头覆盖内容问题：分别在三个有问题的子路由下给“body”添加“margin-top:45px”解决。
+（目前样式完成，代码与源代码不同。仍有疑问：父级display：flex弹性布局下兄弟元素间/子孙间同时添加position：fixed会有覆盖问题）
+
+****************源代码***********************************************************
+#main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#content {
+	flex: 1;
+	overflow: auto;
+	margin-bottom: 50px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+#header {
+		width: 100%;
+		height: 50px;
+		color: #fff;
+		background: #e54847;
+		border-bottom: 1px solid #e54847;
+		position: relative;
+	}
+
+#footer {
+		width: 100%;
+		height: 50px;
+		background: white;
+		border-top: 2px #ebe8e3 solid;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+	
+
+****************现代码***********************************************************
+
+#header{
+		width: 100%;
+		height: 50px;
+		color: #FFFFFF;
+		background: #e54847;
+		border-bottom: 1px solid #E54847;
+		/*z-index: 10;*/
+		flex: 0;
+		position: relative;
+	}		
+
+#footer{
+		width: 100%;
+		height: 50px;
+		background: white;
+		border-top: 2px #ebe8e3 solid;
+		flex: 0;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+
